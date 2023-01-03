@@ -6,6 +6,14 @@
 poetry install
 ```
 
+## run dynamodb-local
+
+```
+docker-compose up --build
+```
+
+- you can view tables in http://localhost:8001/
+
 ## run grpc server
 
 ```
