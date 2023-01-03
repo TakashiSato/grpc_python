@@ -1,0 +1,38 @@
+{
+  "1": {
+    "id": 1,
+    "mail_address": "admin@example.com",
+    "nickname": "admin",
+    "user_type": "ADMINISTRATOR"
+  },
+  "2": {
+    "id": 2,
+    "mail_address": "guest@example.com",
+    "nickname": "guest",
+    "user_type": "GUEST"
+  },
+  "3": {
+    "id": 3,
+    "mail_address": "foo@example.com",
+    "nickname": "foo",
+    "user_type": "NORMAL"
+  },
+  "4": {
+    "id": 4,
+    "mail_address": "troll@example.com",
+    "nickname": "troll",
+    "user_type": "DISABLED"
+  },
+  "5": {
+    "id": 5,
+    "mail_address": "zaru@example.com",
+    "nickname": "Zaru",
+    "user_type": "NORMAL"
+  },
+  "6": {
+    "id": 6,
+    "mail_address": "saru@example.com",
+    "nickname": "Saru",
+    "user_type": "NORMAL"
+  }
+}
