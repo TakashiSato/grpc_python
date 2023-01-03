@@ -12,6 +12,8 @@ grpcio = "^1.51.1"
 grpcio-tools = "^1.51.1"
 betterproto = {extras = ["compiler"], version = "^1.2.5"}
 grpcio-reflection = "^1.51.1"
+boto3 = "^1.26.41"
+autopep8 = "^2.0.1"
 
 
 [build-system]
