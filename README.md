@@ -44,3 +44,7 @@ id (TYPE_UINT32) => 1
   }
 }
 ```
+
+## references
+
+- https://zenn.dev/kumamoto/articles/0596ed47f33965
