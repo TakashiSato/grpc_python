@@ -5,7 +5,7 @@ import boto3
 import json
 from google.protobuf import json_format
 
-import user_pb2
+from user_pb2 import User
 
 dynamodb = boto3.resource("dynamodb", endpoint_url="http://localhost:8000")
 
@@ -49,28 +49,27 @@ def init_table():
                 batch.put_item(Item=item)
 
 
-def get_all_users() -> Optional[List[user_pb2.User]]:
+def get_all_users() -> Optional[List[User]]:
     table = dynamodb.Table('users')
     response = table.scan()
     if 'Items' in response:
         users = response['Items']
-        return [json_format.ParseDict(user, user_pb2.User()) for user in users]
+        return [json_format.ParseDict(user, User()) for user in users]
     return None
 
 
-def get_user(user_id: int) -> Optional[user_pb2.User]:
+def get_user(user_id: int) -> Optional[User]:
     table = dynamodb.Table('users')
     response = table.get_item(Key={"id": user_id})
     if 'Item' in response:
         user = response['Item']
-        return json_format.ParseDict(user, user_pb2.User())
+        return json_format.ParseDict(user, User())
     return None
 
 
-def add_user(user: user_pb2.User):
+def add_user(user: User):
     table = dynamodb.Table('users')
     table.put_item(
-      Item=json_format.MessageToDict(
+        Item=json_format.MessageToDict(
             user, preserving_proto_field_name=True
-    ))
-
+        ))
