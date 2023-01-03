@@ -573,6 +573,24 @@ files = [
 ]
 
 [[package]]
+name = "pynamodb"
+version = "5.3.4"
+description = "A Pythonic Interface to DynamoDB"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "pynamodb-5.3.4-py3-none-any.whl", hash = "sha256:af85814ffa32075c1bd8f01a5281470c7f1dd92f81ea8689f87443cf5e900798"},
+    {file = "pynamodb-5.3.4.tar.gz", hash = "sha256:3991239810c2a3d8bb3503783b787c47dc304566258e0793ae0b1d61909d1a3f"},
+]
+
+[package.dependencies]
+botocore = ">=1.12.54"
+
+[package.extras]
+signals = ["blinker (>=1.3,<2.0)"]
+
+[[package]]
 name = "python-dateutil"
 version = "2.8.2"
 description = "Extensions to the standard Python datetime module"
@@ -689,4 +707,4 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "22b94fc78a413fbd25d8db2f0c9d3753de6041d1e4629e59e58cbc6cc6321565"
+content-hash = "1b1be535475db8fdb1f9eddd1420398a822caca59b466b53cbe87801335b9a31"

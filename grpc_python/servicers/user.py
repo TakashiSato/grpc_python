@@ -1,7 +1,8 @@
 from typing import List, Iterable
 # from collections.abc import Iterable
 
-from .database import init_table, get_all_users, get_user, add_user
+# from .database import init_table, get_all_users, get_user, add_user
+from .pynamodb import init_table, get_all_users, get_user, add_user
 
 from user_pb2 import (
     User, UserRequest, UserResponse,
